@@ -24,10 +24,10 @@ jobs:
       - name: Build Astro
         uses: withastro/action@v3
         env:
-          # Sous-dossier de l'URL de test github.io (p3cstudio.github.io/nivenvol-web/).
+          # Sous-dossier de l'URL de test github.io (p3cstudio.github.io/nidenvol-web/).
           # Le jour du passage sur le domaine nidenvol.fr : supprimer cette ligne
           # (le site sera alors généré pour la racine "/").
-          BASE_PATH: /nivenvol-web
+          BASE_PATH: /nidenvol-web
 
   deploy:
     needs: build

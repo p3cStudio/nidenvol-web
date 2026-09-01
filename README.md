@@ -66,14 +66,14 @@ Mise en route (une seule fois) :
 1. Le dépôt GitHub doit être **public** (obligatoire pour GitHub Pages en offre gratuite).
 2. Sur GitHub : **Settings → Pages → Build and deployment → Source = "GitHub Actions"**.
 3. Pousser sur `main` → l'action se lance → le site est en ligne sur
-   **https://p3cstudio.github.io/nivenvol-web/**
+   **https://p3cstudio.github.io/nidenvol-web/**
 
-Le workflow build avec `BASE_PATH=/nivenvol-web` (sous-dossier de l'URL github.io).
+Le workflow build avec `BASE_PATH=/nidenvol-web` (sous-dossier de l'URL github.io).
 
 ### Passer sur le domaine nidenvol.fr (plus tard)
 
 1. Créer un fichier `public/CNAME` contenant `www.nidenvol.fr`.
-2. Dans `.github/workflows/deploy.yml`, **supprimer la ligne `BASE_PATH: /nivenvol-web`**
+2. Dans `.github/workflows/deploy.yml`, **supprimer la ligne `BASE_PATH: /nidenvol-web`**
    (le site sera alors généré pour la racine `/`).
 3. Configurer le DNS du domaine vers GitHub Pages, puis renseigner le domaine dans
    **Settings → Pages → Custom domain**.
