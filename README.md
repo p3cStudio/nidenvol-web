@@ -58,15 +58,28 @@ Le contenu de `dist/` est ce qu'on met en ligne.
 
 ## Publier sur GitHub Pages
 
-Deux options :
+Le déploiement est **automatique** via GitHub Actions (`.github/workflows/deploy.yml`) :
+à chaque push sur `main`, l'action build le site et le publie.
 
-1. **Build local + push du dossier `dist/`** sur une branche `gh-pages`.
-2. **GitHub Actions** (recommandé) : à chaque push, une action lance `npm run build`
-   et publie `dist/`. Astro fournit un workflow prêt à l'emploi
-   (`withastro/action`). Je peux le mettre en place sur demande.
+Mise en route (une seule fois) :
 
-Pour le domaine `nidenvol.fr` : ajouter un fichier `public/CNAME` contenant
-`www.nidenvol.fr` (les chemins sont racine-relatifs, donc pensés pour un domaine à la racine).
+1. Le dépôt GitHub doit être **public** (obligatoire pour GitHub Pages en offre gratuite).
+2. Sur GitHub : **Settings → Pages → Build and deployment → Source = "GitHub Actions"**.
+3. Pousser sur `main` → l'action se lance → le site est en ligne sur
+   **https://p3cstudio.github.io/nivenvol-web/**
+
+Le workflow build avec `BASE_PATH=/nivenvol-web` (sous-dossier de l'URL github.io).
+
+### Passer sur le domaine nidenvol.fr (plus tard)
+
+1. Créer un fichier `public/CNAME` contenant `www.nidenvol.fr`.
+2. Dans `.github/workflows/deploy.yml`, **supprimer la ligne `BASE_PATH: /nivenvol-web`**
+   (le site sera alors généré pour la racine `/`).
+3. Configurer le DNS du domaine vers GitHub Pages, puis renseigner le domaine dans
+   **Settings → Pages → Custom domain**.
+
+Rien d'autre à changer : la gestion du base path (`src/lib/withBase.js`) devient
+automatiquement inactive à la racine.
 
 ## Points connus
 
