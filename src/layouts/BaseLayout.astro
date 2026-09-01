@@ -1,0 +1,22 @@
+---
+// Layout partagé par toutes les pages.
+// Le header et le footer sont importés UNE fois ici et injectés dans chaque page
+// au moment du build (set:html) → présents en dur dans le HTML final (SEO ok).
+// Pour modifier le footer/header partout : éditer src/fragments/footer.html ou header.html.
+import headerHtml from '../fragments/header.html?raw';
+import footerHtml from '../fragments/footer.html?raw';
+
+const { bodyClass = '' } = Astro.props;
+---
+<!doctype html>
+<html lang="fr-FR" prefix="og: https://ogp.me/ns#">
+  <head>
+    <slot name="head" />
+  </head>
+  <body class={bodyClass}>
+    <Fragment set:html={headerHtml} />
+    <slot />
+    <Fragment set:html={footerHtml} />
+    <slot name="scripts" />
+  </body>
+</html>

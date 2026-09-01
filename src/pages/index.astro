@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import head from '../fragments/home-head.html?raw';
+import content from '../fragments/home-content.html?raw';
+import scripts from '../fragments/home-scripts.html?raw';
+
+const bodyClass = "home wp-singular page-template page-template-elementor_header_footer page page-id-2 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor onetap-root onetap-accessibility-plugin onetap-body-class onetap-custom-class onetap-classes onetap_hide_text_magnifier onetap_hide_dyslexic_font onetap_hide_dark_contrast onetap_hide_saturation onetap_hide_read_page onetap_hide_keyboard_navigation onetap_hide_mute_sounds onetap_hide_highlight_titles hello-elementor-default elementor-default elementor-template-full-width elementor-kit-10 elementor-page elementor-page-2";
+---
+<BaseLayout bodyClass={bodyClass}>
+  <Fragment slot="head" set:html={head} />
+  <Fragment set:html={content} />
+  <Fragment slot="scripts" set:html={scripts} />
+</BaseLayout>
