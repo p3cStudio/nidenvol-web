@@ -267,6 +267,42 @@
 			height: 48px;
 		}
 	}
+
+	/* ===== Bouton custom réutilisable (pages) — assorti au header ===== */
+	.nv-btn-wrap {
+		text-align: center;
+		margin: 10px 0;
+	}
+
+	.nv-btn {
+		display: inline-block;
+		background: #EB668D;
+		color: #fff !important;
+		font-family: 'Poppins', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1;
+		letter-spacing: .3px;
+		padding: 16px 38px;
+		border: none;
+		border-radius: 10px;
+		text-decoration: none;
+		box-shadow: 0 4px 14px rgba(235, 102, 141, .35);
+		transition: background .18s, transform .18s, box-shadow .18s;
+		cursor: pointer;
+	}
+
+	.nv-btn:hover {
+		background: #539FA7;
+		color: #fff !important;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 20px rgba(83, 159, 167, .38);
+	}
+
+	.nv-btn:focus-visible {
+		outline: 3px solid rgba(83, 159, 167, .55);
+		outline-offset: 2px;
+	}
 </style>
 <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
 <header class="nv-header">
