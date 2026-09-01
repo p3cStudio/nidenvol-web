@@ -7,7 +7,10 @@ Pages, OVH, etc.). Aucune base de données, aucun PHP.
 
 ## Contenu
 
-- `index.html` — la page (one-page avec navigation par ancres).
+- `index.html` — la page d'accueil (one-page avec navigation par ancres).
+- `micro-creche-arleux/index.html` — page « Micro-crèche proche d'Arleux »
+  (URL propre `/micro-creche-arleux/`). Liée depuis le footer de l'accueil via
+  le terme « crèche Arleux ». Son menu renvoie vers les ancres de l'accueil.
 - `wp-content/` — tous les CSS, JS, images et polices, chemins **relatifs**
   (le site fonctionne à la racine d'un domaine comme dans un sous-dossier).
 - `.nojekyll` — évite tout traitement Jekyll sur GitHub Pages.

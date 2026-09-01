@@ -68,9 +68,9 @@ ASSET_RE = re.compile(r'https?://' + re.escape(HOST) + r'/[^\s"\'\)]+')
 def collect_urls(text):
     return set(m.group(0) for m in ASSET_RE.finditer(text))
 
-def main():
-    # 1. homepage
-    html = fetch(BASE + "/").decode("utf-8", "replace")
+def main(page_path="/", out_local="index.html"):
+    # 1. fetch target page
+    html = fetch(BASE + page_path).decode("utf-8", "replace")
     # find all asset urls (css/js/img/fonts) that are files (have an extension) or wp-content
     urls = collect_urls(html)
     asset_ext = (".css",".js",".webp",".png",".jpg",".jpeg",".gif",".svg",".woff",".woff2",".ttf",".eot",".ico",".mp4",".webm")
@@ -106,11 +106,13 @@ def main():
             return u
         return ASSET_RE.sub(repl, text)
 
-    # homepage
-    html_out = rewrite(html, "index.html")
-    with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
+    # target page
+    html_out = rewrite(html, out_local)
+    dest_page = os.path.join(ROOT, out_local)
+    os.makedirs(os.path.dirname(dest_page) or ".", exist_ok=True)
+    with open(dest_page, "w", encoding="utf-8") as f:
         f.write(html_out)
-    print("wrote index.html")
+    print("wrote", out_local)
     # css files
     for css_url, css_local in to_process_css:
         dest = os.path.join(ROOT, css_local)
@@ -122,4 +124,7 @@ def main():
     print("rewrote", len(to_process_css), "css files")
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) >= 3:
+        main(sys.argv[1], sys.argv[2])
+    else:
+        main()
