@@ -17,5 +17,5 @@ export function withBase(html) {
     .replace(/([="'(,]\s*)\/(wp-content|wp-includes)\//g, (_m, p, dir) => `${p}${base}${dir}/`)
     // liens internes
     .replaceAll('href="/"', `href="${base}"`)
-    .replace(/href="\/(#|micro-creche-arleux\/)/g, `href="${base}$1`);
+    .replace(/href="\/(#|micro-creche-[a-z-]+\/)/g, `href="${base}$1`);
 }
