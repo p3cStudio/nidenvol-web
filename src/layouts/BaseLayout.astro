@@ -5,6 +5,7 @@
 // Pour modifier le footer/header partout : éditer src/fragments/footer.html ou header.html.
 import headerHtml from '../fragments/header.html?raw';
 import footerHtml from '../fragments/footer.html?raw';
+import { withBase } from '../lib/withBase.js';
 
 const { bodyClass = '' } = Astro.props;
 ---
@@ -14,9 +15,9 @@ const { bodyClass = '' } = Astro.props;
     <slot name="head" />
   </head>
   <body class={bodyClass}>
-    <Fragment set:html={headerHtml} />
+    <Fragment set:html={withBase(headerHtml)} />
     <slot />
-    <Fragment set:html={footerHtml} />
+    <Fragment set:html={withBase(footerHtml)} />
     <slot name="scripts" />
   </body>
 </html>
