@@ -25,11 +25,10 @@ jobs:
         uses: withastro/action@v3
         with:
           node-version: 22 # Astro 7 exige Node >= 22.12 (l'action utilise 20 par défaut)
-        env:
-          # Sous-dossier de l'URL de test github.io (p3cstudio.github.io/nidenvol-web/).
-          # Le jour du passage sur le domaine nidenvol.fr : supprimer cette ligne
-          # (le site sera alors généré pour la racine "/").
-          BASE_PATH: /nidenvol-web
+        # Site généré pour la racine "/" (domaine nidenvol.fr).
+        # Pour re-tester sur l'URL github.io en sous-dossier, remettre :
+        #   env:
+        #     BASE_PATH: /nidenvol-web
 
   deploy:
     needs: build
