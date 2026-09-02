@@ -719,6 +719,107 @@
 			max-width: 360px;
 		}
 	}
+
+	/* ===== Presse : "Ils parlent de nous" ===== */
+	.nv-press {
+		max-width: 1180px;
+		margin: 0 auto;
+		padding: 8px 24px 24px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 22px;
+		box-sizing: border-box;
+	}
+
+	.nv-press * {
+		box-sizing: border-box;
+	}
+
+	.nv-press-card {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		background: #fff;
+		border: 1px solid #eef0f2;
+		border-radius: 18px;
+		box-shadow: 0 8px 24px rgba(20, 40, 60, .06);
+		padding: 24px 22px;
+		text-decoration: none;
+		transition: transform .16s, box-shadow .16s;
+	}
+
+	.nv-press-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 12px 26px rgba(20, 40, 60, .11);
+	}
+
+	.nv-press-logo {
+		height: 34px;
+		display: flex;
+		align-items: center;
+		font-weight: 800;
+		letter-spacing: -.3px;
+		line-height: 1;
+	}
+
+	/* Logos typographiques (à remplacer par de vraies images si besoin) */
+	.nv-press-logo.vdn {
+		font-family: Georgia, 'Times New Roman', serif;
+		color: #0854e8;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.nv-press-logo.obs {
+		font-family: Georgia, 'Times New Roman', serif;
+		color: #dd3333;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.nv-press-logo img {
+		max-height: 34px;
+		width: auto;
+	}
+
+	.nv-press-date {
+		font-size: 12.5px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		color: #9aa2a9;
+	}
+
+	.nv-press-title {
+		font-size: 15.5px;
+		font-weight: 600;
+		color: #3f4b52;
+		line-height: 1.45;
+		flex: 1;
+	}
+
+	.nv-press-link {
+		font-size: 14px;
+		font-weight: 600;
+		color: #EB668D;
+	}
+
+	.nv-press-card:hover .nv-press-link {
+		color: #539FA7;
+	}
+
+	@media (max-width:1000px) {
+		.nv-press {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (max-width:560px) {
+		.nv-press {
+			grid-template-columns: 1fr;
+			max-width: 420px;
+		}
+	}
 </style>
 <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
 <header class="nv-header">
@@ -763,6 +864,7 @@
 					<a href="/#contact">Contact</a>
 					<a href="/#galerie">Galerie</a>
 					<a href="/#partenaires">Partenaires</a>
+					<a href="/#presse">Presse</a>
 					<a href="https://airtable.com/appsR3pHTSiWc0gt1/shr32GHkAANiRbJPs" target="_blank" rel="noopener"
 						class="nv-only-mobile">Recrutement</a>
 				</nav>
