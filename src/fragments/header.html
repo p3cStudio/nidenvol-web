@@ -562,6 +562,100 @@
 			padding: 0 24px;
 		}
 	}
+
+	/* ===== Avis / Témoignages (3 cartes) ===== */
+	.nv-reviews {
+		max-width: 1180px;
+		margin: 0 auto;
+		padding: 8px 24px 24px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 26px;
+		box-sizing: border-box;
+	}
+
+	.nv-reviews * {
+		box-sizing: border-box;
+	}
+
+	.nv-review {
+		background: #fff;
+		border: 1px solid #eef0f2;
+		border-radius: 20px;
+		box-shadow: 0 10px 30px rgba(20, 40, 60, .06);
+		padding: 30px 28px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.nv-review::before {
+		content: "\201C";
+		position: absolute;
+		top: 4px;
+		right: 22px;
+		font-family: Georgia, serif;
+		font-size: 92px;
+		line-height: 1;
+		color: #f0f4f4;
+		pointer-events: none;
+	}
+
+	.nv-review-stars {
+		display: flex;
+		gap: 3px;
+		color: #FAB42F;
+	}
+
+	.nv-review-text {
+		color: #4b5560;
+		font-size: 15.5px;
+		line-height: 1.65;
+		font-style: italic;
+		flex: 1;
+		position: relative;
+		z-index: 1;
+	}
+
+	.nv-review-author {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.nv-review-avatar {
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		font-size: 18px;
+		flex: 0 0 auto;
+	}
+
+	.nv-review-name {
+		font-weight: 600;
+		color: #3f4b52;
+		font-size: 15px;
+		line-height: 1.25;
+	}
+
+	.nv-review-loc {
+		color: #8b949b;
+		font-size: 13px;
+	}
+
+	@media (max-width:900px) {
+		.nv-reviews {
+			grid-template-columns: 1fr;
+			max-width: 560px;
+		}
+	}
 </style>
 <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
 <header class="nv-header">
