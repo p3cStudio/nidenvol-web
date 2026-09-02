@@ -13,8 +13,8 @@ export function withBase(html) {
   if (base === '/' || base === '') return html;
   if (!base.endsWith('/')) base += '/'; // garantir le slash final
   return html
-    // assets : src="/wp-content/...", url(/wp-content/...), srcset "..., /wp-content/..."
-    .replace(/([="'(,]\s*)\/(wp-content|wp-includes)\//g, (_m, p, dir) => `${p}${base}${dir}/`)
+    // assets : src="/css/...", /js/..., /fonts/..., /img/..., srcset "..., /img/..."
+    .replace(/([="'(,]\s*)\/(css|js|fonts|img|vendor)\//g, (_m, p, dir) => `${p}${base}${dir}/`)
     // liens internes
     .replaceAll('href="/"', `href="${base}"`)
     .replace(/href="\/(#|micro-creche-[a-z-]+\/)/g, `href="${base}$1`);
