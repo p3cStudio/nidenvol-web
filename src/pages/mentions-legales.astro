@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import head from '../fragments/mentions-head.html?raw';
+import content from '../fragments/mentions-content.html?raw';
+import { withBase } from '../lib/withBase.js';
+
+const bodyClass = "page-mentions-legales";
+---
+<BaseLayout bodyClass={bodyClass}>
+  <Fragment slot="head" set:html={withBase(head)} />
+  <Fragment set:html={withBase(content)} />
+</BaseLayout>
