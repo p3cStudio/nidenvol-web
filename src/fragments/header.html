@@ -317,6 +317,66 @@
 		width: auto !important;
 		height: clamp(44px, 4.6vw, 62px) !important;
 	}
+
+	/* ===== Mosaïque partenaires (remplace le carousel) ===== */
+	.nv-partners {
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 1040px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 22px;
+		padding: 0 20px;
+	}
+
+	.nv-partners * {
+		box-sizing: border-box;
+	}
+
+	.nv-partner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fff;
+		border: 1px solid #eef0f2;
+		border-radius: 16px;
+		padding: 22px;
+		min-height: 120px;
+		box-shadow: 0 4px 14px rgba(20, 40, 60, .05);
+		transition: transform .18s, box-shadow .18s;
+	}
+
+	.nv-partner:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 20px rgba(20, 40, 60, .1);
+	}
+
+	.nv-partner img {
+		max-width: 100%;
+		max-height: 66px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+	}
+
+	@media (max-width:900px) {
+		.nv-partners {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@media (max-width:560px) {
+		.nv-partners {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 14px;
+		}
+
+		.nv-partner {
+			min-height: 100px;
+			padding: 16px;
+		}
+	}
 </style>
 <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
 <header class="nv-header">
