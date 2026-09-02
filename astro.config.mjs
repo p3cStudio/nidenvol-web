@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // Site statique (SSG) : `astro build` génère du HTML pur dans dist/, hébergeable
 // tel quel sur GitHub Pages. Header/footer sont mutualisés via des composants,
@@ -13,4 +14,10 @@ export default defineConfig({
   build: {
     format: 'directory', // /micro-creche-arleux/ -> dist/micro-creche-arleux/index.html
   },
+  integrations: [
+    sitemap({
+      // Exclut la page mentions légales (en noindex) du sitemap.
+      filter: (page) => !page.includes('/mentions-legales'),
+    }),
+  ],
 });
