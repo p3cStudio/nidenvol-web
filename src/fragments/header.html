@@ -232,9 +232,9 @@
 			display: block;
 		}
 
+		/* En mobile, le CTA n'est plus dans le burger : il est sous le titre hero (.nv-mobile-cta) */
 		.nv-cta {
-			margin: 16px 24px;
-			text-align: center;
+			display: none;
 		}
 
 		.nv-nav-toggle:checked~.nv-menu {
@@ -546,6 +546,20 @@
 
 		.nv-contact-map iframe {
 			min-height: 300px;
+		}
+	}
+
+	/* ===== CTA Pré-inscription : visible seulement en mobile (sinon dans le header) ===== */
+	.nv-mobile-cta {
+		display: none;
+	}
+
+	@media (max-width:1080px) {
+		.nv-mobile-cta {
+			display: flex;
+			justify-content: center;
+			margin: 18px auto 4px;
+			padding: 0 24px;
 		}
 	}
 </style>
