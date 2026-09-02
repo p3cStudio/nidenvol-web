@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import head from '../fragments/cambrai-head.html?raw';
+import content from '../fragments/cambrai-content.html?raw';
+import scripts from '../fragments/cambrai-scripts.html?raw';
+import { withBase } from '../lib/withBase.js';
+
+const bodyClass = "wp-singular page-template page-template-elementor_header_footer page page-id-729 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-10 elementor-page elementor-page-729";
+---
+<BaseLayout bodyClass={bodyClass}>
+  <Fragment slot="head" set:html={withBase(head)} />
+  <Fragment set:html={withBase(content)} />
+  <Fragment slot="scripts" set:html={withBase(scripts)} />
+</BaseLayout>

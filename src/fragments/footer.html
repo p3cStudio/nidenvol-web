@@ -1,133 +1,305 @@
 <style>
-/* ===== Footer custom Nid'Envol (indépendant d'Elementor) ===== */
-.nv-footer{font-family:'Poppins','Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fbf9f5;color:#54606a;font-size:15px;line-height:1.6;}
-.nv-footer *{box-sizing:border-box;}
-.nv-footer a{color:#54606a;text-decoration:none;transition:color .15s;}
-.nv-footer a:hover{color:#EB668D;}
-.nv-footer-top{max-width:1280px;margin:0 auto;padding:56px 24px 36px;display:grid;grid-template-columns:1.5fr 1.1fr 1fr 1.1fr;gap:40px;}
-.nv-foot-h{color:#4d9aa4;font-size:16px;font-weight:700;letter-spacing:.3px;margin:0 0 18px;}
+	/* ===== Footer custom Nid'Envol (indépendant d'Elementor) ===== */
+	.nv-footer {
+		font-family: 'Poppins', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		background: #fbf9f5;
+		color: #54606a;
+		font-size: 15px;
+		line-height: 1.6;
+	}
 
-/* Colonne marque */
-.nv-foot-logo img{height:66px;width:auto;display:block;margin-bottom:16px;}
-.nv-foot-pitch{margin:0 0 18px;max-width:340px;}
-.nv-foot-social{display:flex;align-items:center;gap:12px;}
-.nv-foot-social a{display:inline-flex;align-items:center;gap:8px;font-weight:500;color:#4d9aa4;}
-.nv-foot-social a:hover{color:#EB668D;}
-.nv-foot-social .ico{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:#4d9aa4;color:#fff;flex:0 0 auto;transition:background .15s;}
-.nv-foot-social a:hover .ico{background:#EB668D;}
+	.nv-footer * {
+		box-sizing: border-box;
+	}
 
-/* Listes */
-.nv-foot-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;}
+	.nv-footer a {
+		color: #54606a;
+		text-decoration: none;
+		transition: color .15s;
+	}
 
-/* Coordonnées */
-.nv-foot-contact{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;}
-.nv-foot-contact li{display:flex;align-items:flex-start;gap:11px;}
-.nv-foot-contact svg{flex:0 0 auto;margin-top:3px;color:#4d9aa4;}
-.nv-foot-itineraire{display:inline-block;margin-top:4px;font-weight:600;color:#4d9aa4;}
+	.nv-footer a:hover {
+		color: #EB668D;
+	}
 
-/* Zone desservie */
-.nv-foot-zone-note{margin:14px 0 0;font-size:13.5px;color:#7b858d;}
+	.nv-footer-top {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 56px 24px 36px;
+		display: grid;
+		grid-template-columns: 1.5fr 1.1fr 1fr 1.1fr;
+		gap: 40px;
+	}
 
-/* Barre du bas */
-.nv-footer-bottom{background:#4d9aa4;color:#fff;font-size:13.5px;}
-.nv-footer-bottom-inner{max-width:1280px;margin:0 auto;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;}
-.nv-footer-bottom a{color:#fff;text-decoration:underline;text-underline-offset:2px;}
-.nv-footer-bottom a:hover{color:#ffe3ec;}
-.nv-footer-bottom .nv-foot-cities{opacity:.95;}
+	.nv-foot-h {
+		color: #4d9aa4;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: .3px;
+		margin: 0 0 18px;
+	}
 
-@media (max-width:900px){
-  .nv-footer-top{grid-template-columns:1fr 1fr;gap:34px;}
-}
-@media (max-width:560px){
-  .nv-footer-top{grid-template-columns:1fr;padding:40px 22px 28px;}
-  .nv-footer-bottom-inner{flex-direction:column;text-align:center;}
-}
+	/* Colonne marque */
+	.nv-foot-logo img {
+		height: 66px;
+		width: auto;
+		display: block;
+		margin-bottom: 16px;
+	}
+
+	.nv-foot-pitch {
+		margin: 0 0 18px;
+		max-width: 340px;
+	}
+
+	.nv-foot-social {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.nv-foot-social a {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		font-weight: 500;
+		color: #4d9aa4;
+	}
+
+	.nv-foot-social a:hover {
+		color: #EB668D;
+	}
+
+	.nv-foot-social .ico {
+		width: 34px;
+		height: 34px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background: #4d9aa4;
+		color: #fff;
+		flex: 0 0 auto;
+		transition: background .15s;
+	}
+
+	.nv-foot-social a:hover .ico {
+		background: #EB668D;
+	}
+
+	/* Listes */
+	.nv-foot-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 11px;
+	}
+
+	/* Coordonnées */
+	.nv-foot-contact {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.nv-foot-contact li {
+		display: flex;
+		align-items: flex-start;
+		gap: 11px;
+	}
+
+	.nv-foot-contact svg {
+		flex: 0 0 auto;
+		margin-top: 3px;
+		color: #4d9aa4;
+	}
+
+	.nv-foot-itineraire {
+		display: inline-block;
+		margin-top: 4px;
+		font-weight: 600;
+		color: #4d9aa4;
+	}
+
+	/* Zone desservie */
+	.nv-foot-zone-note {
+		margin: 14px 0 0;
+		font-size: 13.5px;
+		color: #7b858d;
+	}
+
+	/* Barre du bas */
+	.nv-footer-bottom {
+		background: #4d9aa4;
+		color: #fff;
+		font-size: 13.5px;
+	}
+
+	.nv-footer-bottom-inner {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 16px 24px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px 20px;
+	}
+
+	.nv-footer-bottom a {
+		color: #fff;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.nv-footer-bottom a:hover {
+		color: #ffe3ec;
+	}
+
+	.nv-footer-bottom .nv-foot-cities {
+		opacity: .95;
+	}
+
+	@media (max-width:900px) {
+		.nv-footer-top {
+			grid-template-columns: 1fr 1fr;
+			gap: 34px;
+		}
+	}
+
+	@media (max-width:560px) {
+		.nv-footer-top {
+			grid-template-columns: 1fr;
+			padding: 40px 22px 28px;
+		}
+
+		.nv-footer-bottom-inner {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
 </style>
 <footer class="nv-footer">
-  <div class="nv-footer-top">
+	<div class="nv-footer-top">
 
-    <!-- Marque + pitch -->
-    <div class="nv-foot-brand">
-      <a href="/" class="nv-foot-logo" aria-label="Accueil - Nid'Envol">
-        <img src="/img/layout/cropped-nid-envol-micro-creche-Aubencheul-au-Bac-1024x450.webp" width="800" height="352" alt="Nid'Envol micro-crèche" />
-      </a>
-      <p class="nv-foot-pitch">
-        <strong>Micro-crèche à Aubencheul-au-Bac</strong> (59), Nid'Envol accueille les enfants
-        de <strong>10 semaines à 3 ans</strong> (jusqu'à 12 places) dans un cadre chaleureux et
-        sécurisé. Un mode de garde de proximité entre <strong>Cambrai, Douai et Arleux</strong>.
-      </p>
-      <div class="nv-foot-social">
-        <a href="https://www.facebook.com/nidenvol" target="_blank" rel="noopener" aria-label="Facebook Nid'Envol">
-          <span class="ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M13 22v-8h2.7l.4-3H13V9.1c0-.9.3-1.5 1.6-1.5H16V5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9V11H7.5v3H10v8h3z"/></svg></span>
-          Facebook
-        </a>
-        <a href="https://www.google.com/maps?cid=9832404479974731192" target="_blank" rel="noopener" aria-label="Voir nos avis Google">
-          <span class="ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6L12 2z"/></svg></span>
-          Avis Google
-        </a>
-      </div>
-    </div>
+		<!-- Marque + pitch -->
+		<div class="nv-foot-brand">
+			<a href="/" class="nv-foot-logo" aria-label="Accueil - Nid'Envol">
+				<img src="/img/layout/cropped-nid-envol-micro-creche-Aubencheul-au-Bac-1024x450.webp" width="800"
+					height="352" alt="Nid'Envol micro-crèche" />
+			</a>
+			<p class="nv-foot-pitch">
+				<strong>Micro-crèche à Aubencheul-au-Bac</strong> (59), Nid'Envol accueille les enfants
+				de <strong>10 semaines à 3 ans</strong> (jusqu'à 12 places) dans un cadre chaleureux et
+				sécurisé. Un mode de garde de proximité entre <strong>Cambrai, Douai et Arleux</strong>.
+			</p>
+			<div class="nv-foot-social">
+				<a href="https://www.facebook.com/nidenvol" target="_blank" rel="noopener"
+					aria-label="Facebook Nid'Envol">
+					<span class="ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"
+							aria-hidden="true">
+							<path
+								d="M13 22v-8h2.7l.4-3H13V9.1c0-.9.3-1.5 1.6-1.5H16V5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9V11H7.5v3H10v8h3z" />
+						</svg></span>
+					Facebook
+				</a>
+				<a href="https://www.google.com/maps?cid=9832404479974731192" target="_blank" rel="noopener"
+					aria-label="Voir nos avis Google">
+					<span class="ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"
+							aria-hidden="true">
+							<path
+								d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.8 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6L12 2z" />
+						</svg></span>
+					Avis Google
+				</a>
+			</div>
+		</div>
 
-    <!-- Coordonnées -->
-    <div class="nv-foot-coords">
-      <h2 class="nv-foot-h">Nous contacter</h2>
-      <ul class="nv-foot-contact">
-        <li>
-          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
-          <span>7 rue des Colombes<br>59265 Aubencheul-au-Bac</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
-          <a href="tel:+33695176338">06 95 17 63 38</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7L4 7v1l8 5 8-5V7l-8 5z"/></svg>
-          <a href="mailto:contact@nidenvol.fr">contact@nidenvol.fr</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4-4-2.3V7h1.5v4.2l3.2 1.9-.7 1.3z"/></svg>
-          <span>Lun – Ven : 7h30 – 18h30<br><small style="opacity:.7">Samedi &amp; dimanche : fermé</small></span>
-        </li>
-      </ul>
-      <a class="nv-foot-itineraire" href="https://www.google.com/maps/dir/?api=1&destination=7+rue+des+Colombes+59265+Aubencheul-au-Bac" target="_blank" rel="noopener">Voir l'itinéraire →</a>
-    </div>
+		<!-- Coordonnées -->
+		<div class="nv-foot-coords">
+			<h2 class="nv-foot-h">Nous contacter</h2>
+			<ul class="nv-foot-contact">
+				<li>
+					<svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
+						<path
+							d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+					</svg>
+					<span>7 rue des Colombes<br>59265 Aubencheul-au-Bac</span>
+				</li>
+				<li>
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+						<path
+							d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z" />
+					</svg>
+					<a href="tel:+33695176338">06 95 17 63 38</a>
+				</li>
+				<li>
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+						<path
+							d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7L4 7v1l8 5 8-5V7l-8 5z" />
+					</svg>
+					<a href="mailto:contact@nidenvol.fr">contact@nidenvol.fr</a>
+				</li>
+				<li>
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+						<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4-4-2.3V7h1.5v4.2l3.2 1.9-.7 1.3z" />
+					</svg>
+					<span>Lun – Ven : 7h30 – 18h30<br><small style="opacity:.7">Samedi &amp; dimanche :
+							fermé</small></span>
+				</li>
+			</ul>
+			<a class="nv-foot-itineraire"
+				href="https://www.google.com/maps/dir/?api=1&destination=7+rue+des+Colombes+59265+Aubencheul-au-Bac"
+				target="_blank" rel="noopener">Voir l'itinéraire →</a>
+		</div>
 
-    <!-- Navigation -->
-    <div class="nv-foot-nav">
-      <h2 class="nv-foot-h">Le site</h2>
-      <ul class="nv-foot-list">
-        <li><a href="/#creche">La micro-crèche</a></li>
-        <li><a href="/#offre">L'offre</a></li>
-        <li><a href="/#info">Notre organisation</a></li>
-        <li><a href="/#equipe">L'équipe</a></li>
-        <li><a href="/#galerie">Galerie photos</a></li>
-        <li><a href="/#partenaires">Nos partenaires</a></li>
-        <li><a href="/#presse">Ils parlent de nous</a></li>
-        <li><a href="https://airtable.com/appsR3pHTSiWc0gt1/shr32GHkAANiRbJPs" target="_blank" rel="noopener">Recrutement</a></li>
-        <li><a href="/mentions-legales/">Mentions légales</a></li>
-      </ul>
-    </div>
+		<!-- Navigation -->
+		<div class="nv-foot-nav">
+			<h2 class="nv-foot-h">Le site</h2>
+			<ul class="nv-foot-list">
+				<li><a href="/#creche">La micro-crèche</a></li>
+				<li><a href="/#offre">L'offre</a></li>
+				<li><a href="/#info">Notre organisation</a></li>
+				<li><a href="/#equipe">L'équipe</a></li>
+				<li><a href="/#galerie">Galerie photos</a></li>
+				<li><a href="/#partenaires">Nos partenaires</a></li>
+				<li><a href="/#presse">Ils parlent de nous</a></li>
+				<li><a href="https://airtable.com/appsR3pHTSiWc0gt1/shr32GHkAANiRbJPs" target="_blank"
+						rel="noopener">Recrutement</a></li>
+				<li><a href="/mentions-legales/">Mentions légales</a></li>
+			</ul>
+		</div>
 
-    <!-- Zone desservie (SEO local) -->
-    <div class="nv-foot-zone">
-      <h2 class="nv-foot-h">Nos crèches à proximité</h2>
-      <ul class="nv-foot-list">
-        <li><a href="/#creche">Micro-crèche à Aubencheul-au-Bac</a></li>
-        <li><a href="/micro-creche-arleux/">Micro-crèche proche d'Arleux</a></li>
-        <li><a href="/micro-creche-bugnicourt/">Micro-crèche proche de Bugnicourt</a></li>
-      </ul>
-      <p class="nv-foot-zone-note">Nous accueillons aussi les familles de Cambrai, Cantin, Douai, Lécluse et Brunémont.</p>
-    </div>
+		<!-- Zone desservie (SEO local) -->
+		<div class="nv-foot-zone">
+			<h2 class="nv-foot-h">Nos crèches à proximité</h2>
+			<ul class="nv-foot-list">
+				<li><a href="/#creche">Micro-crèche à Aubencheul-au-Bac</a></li>
+				<li><a href="/micro-creche-cambrai/">Micro-crèche proche de Cambrai</a></li>
+				<li><a href="/micro-creche-arleux/">Micro-crèche proche d'Arleux</a></li>
+				<li><a href="/micro-creche-bugnicourt/">Micro-crèche proche de Bugnicourt</a></li>
+				<li><a href="/micro-creche-marquion/">Micro-crèche proche de Marquion</a></li>
+				<li><a href="/micro-creche-baralle/">Micro-crèche proche de Baralle</a></li>
+				<li><a href="/micro-creche-cantin/">Micro-crèche proche de Cantin</a></li>
+				<li><a href="/micro-creche-douai-cambrai/">Micro-crèche entre Douai et Cambrai</a></li>
+			</ul>
+			<p class="nv-foot-zone-note">Nous accueillons aussi les familles de Douai, Lécluse et Brunémont.</p>
+		</div>
 
-  </div>
+	</div>
 
-  <div class="nv-footer-bottom">
-    <div class="nv-footer-bottom-inner">
-      <span>© 2025 Nid'Envol — Micro-crèche à Aubencheul-au-Bac</span>
-      <span class="nv-foot-cities">crèche Cambrai, <a href="/micro-creche-arleux/">crèche Arleux</a>, <a href="/micro-creche-bugnicourt/">crèche Bugnicourt</a></span>
-      <span>Site réalisé par <a href="https://www.delphacrea.fr/" target="_blank" rel="noopener">Delphacréa</a></span>
-    </div>
-  </div>
+	<div class="nv-footer-bottom">
+		<div class="nv-footer-bottom-inner">
+			<span>© 2025 Nid'Envol — Micro-crèche à Aubencheul-au-Bac</span>
+			<span>Site réalisé par <a href="https://www.delphacrea.fr/" target="_blank" rel="noopener">Delphacréa</a> X
+				<a href="https://p3c.studio/" target="_blank" rel="noopener">P3C Studio</a></span>
+		</div>
+	</div>
 </footer>
 
 <script type="application/ld+json">
