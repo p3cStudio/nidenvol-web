@@ -377,6 +377,177 @@
 			padding: 16px;
 		}
 	}
+
+	/* ===== Section Contact (2 colonnes, moderne) ===== */
+	.nv-contact {
+		max-width: 1180px;
+		margin: 0 auto;
+		padding: 6px 24px 24px;
+		font-family: 'Poppins', 'Roboto', -apple-system, sans-serif;
+		box-sizing: border-box;
+	}
+
+	.nv-contact * {
+		box-sizing: border-box;
+	}
+
+	.nv-contact-titlerow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: clamp(16px, 5vw, 70px);
+		margin-bottom: 14px;
+	}
+
+	.nv-contact-title {
+		color: #4d9aa4;
+		font-weight: 700;
+		font-size: clamp(30px, 4.4vw, 46px);
+		line-height: 1.2;
+		margin: 0;
+	}
+
+	.nv-contact-lead {
+		text-align: center;
+		max-width: 680px;
+		margin: 0 auto 40px;
+		color: #54606a;
+		font-size: 17px;
+		line-height: 1.6;
+	}
+
+	.nv-contact-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 28px;
+		align-items: stretch;
+	}
+
+	.nv-contact-card {
+		background: #fff;
+		border: 1px solid #eef0f2;
+		border-radius: 22px;
+		box-shadow: 0 10px 30px rgba(20, 40, 60, .07);
+		padding: clamp(24px, 3vw, 38px);
+		display: flex;
+		flex-direction: column;
+		gap: 22px;
+	}
+
+	.nv-ci-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.nv-ci-list li {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		font-size: 16px;
+		color: #3f4b52;
+	}
+
+	.nv-ci-list a {
+		color: #3f4b52;
+		text-decoration: none;
+		transition: color .15s;
+	}
+
+	.nv-ci-list a:hover {
+		color: #EB668D;
+	}
+
+	.nv-ci-ico {
+		flex: 0 0 auto;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		background: #eef7f7;
+		color: #4d9aa4;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.nv-hours {
+		background: #faf9f5;
+		border-radius: 16px;
+		padding: 18px 20px;
+	}
+
+	.nv-hours h3 {
+		margin: 0 0 10px;
+		color: #4d9aa4;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: .4px;
+	}
+
+	.nv-hours ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.nv-hours li {
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+		font-size: 15px;
+		color: #3f4b52;
+	}
+
+	.nv-hours li span {
+		font-weight: 600;
+		color: #4d9aa4;
+	}
+
+	.nv-hours li.closed span {
+		color: #d08290;
+	}
+
+	.nv-contact-card .nv-btn {
+		align-self: flex-start;
+		margin-top: auto;
+	}
+
+	.nv-contact-map {
+		border-radius: 22px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(20, 40, 60, .1);
+		border: 1px solid #eef0f2;
+		min-height: 430px;
+	}
+
+	.nv-contact-map iframe {
+		width: 100%;
+		height: 100%;
+		min-height: 430px;
+		border: 0;
+		display: block;
+	}
+
+	@media (max-width:860px) {
+		.nv-contact-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.nv-contact-map {
+			min-height: 300px;
+		}
+
+		.nv-contact-map iframe {
+			min-height: 300px;
+		}
+	}
 </style>
 <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
 <header class="nv-header">
